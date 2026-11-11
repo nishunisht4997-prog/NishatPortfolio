@@ -182,7 +182,10 @@ function About() {
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-neutral-800/80 flex items-center justify-between text-xs text-neutral-400">
-              <span>B.Sc. (2022–2025)</span>
+              <span className="text-emerald-400 font-medium flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                Pursuing – 2nd Year
+              </span>
               <span className="text-neutral-300 font-mono">Odisha, India</span>
             </div>
           </motion.div>
