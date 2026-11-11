@@ -45,8 +45,8 @@ function Resume() {
         title: "Web Developer Intern",
         company: "Zaalima Technology",
         period: "May 2026 – Jul 2026",
-        location: "Bhubaneswar, Odisha, India",
-        type: "Internship",
+        location: "Remote, India",
+        type: "Internship (Remote)",
         tags: ["React.js", "Tailwind CSS", "RESTful APIs", "State Management"],
         achievements: [
           "Engineered reusable, high-performance UI components and responsive layouts using React.js and Tailwind CSS.",
@@ -100,22 +100,22 @@ function Resume() {
     []
   );
 
-  /* ================= CERTIFICATIONS ================= */
+  /* ================= CERTIFICATIONS & TRAININGS ================= */
   const certifications = useMemo(
     () => [
+      {
+        name: "Web Development Internship Certification",
+        issuer: "Zaalima Technology",
+        year: "2026",
+        details:
+          "Hands-on industrial remote internship training focused on modern frontend architecture, reusable React components, and responsive web design.",
+      },
       {
         name: "Web Development Internship Certification",
         issuer: "Internship Studio",
         year: "2025",
         details:
           "Hands-on industrial training building production-grade web interfaces and full-stack solutions.",
-      },
-      {
-        name: "Web Development",
-        issuer: "IBM SkillsBuild",
-        year: "2024",
-        details:
-          "IBM-certified task-based training focused on real-world web development and modern frontend workflows.",
       },
     ],
     []
