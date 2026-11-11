@@ -13,27 +13,38 @@ function Home() {
     setIsMobile(window.innerWidth < 768);
 
     const ctx = gsap.context(() => {
-      // Cinematic staggered entrance
+      // Cinematic staggered entrance with scale and blur
       gsap.fromTo(
         ".gsap-hero-elem",
         {
-          y: 35,
+          y: 40,
           opacity: 0,
+          scale: 0.98,
         },
         {
           y: 0,
           opacity: 1,
-          duration: 0.9,
-          stagger: 0.12,
+          scale: 1,
+          duration: 1.0,
+          stagger: 0.14,
           ease: "power3.out",
         }
       );
 
       // Subtle breathing glow animation
       gsap.to(".hero-glow-orb", {
-        scale: 1.15,
-        opacity: 0.25,
-        duration: 4,
+        scale: 1.25,
+        opacity: 0.35,
+        duration: 4.5,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      // Cinematic floating badge motion
+      gsap.to(".hero-floating-pill", {
+        y: -5,
+        duration: 2.2,
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
@@ -63,9 +74,14 @@ function Home() {
       <div className="hero-glow-orb absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-cyan-500/10 via-emerald-500/10 to-transparent rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
 
+      {/* Cinematic Ambient Light Sweep */}
+      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none">
+        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-cyan-500/20 via-teal-500/10 to-emerald-500/15 opacity-40 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
+      </div>
+
       <div className="relative z-10 max-w-5xl mx-auto text-center px-4">
         {/* Availability Pill */}
-        <div className="gsap-hero-elem flex justify-center mb-6">
+        <div className="gsap-hero-elem hero-floating-pill flex justify-center mb-6">
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-neutral-900/80 border border-emerald-500/30 backdrop-blur-md shadow-lg shadow-emerald-500/5">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>

@@ -43,7 +43,7 @@ function About() {
           
           {/* Bento Card 1: Main Story (Spans 2 columns on desktop) */}
           <motion.div
-            className="md:col-span-2 lg:col-span-2 p-6 md:p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
+            className="md:col-span-2 lg:col-span-2 p-4 sm:p-6 md:p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -96,7 +96,7 @@ function About() {
 
           {/* Bento Card 2: Healthcare & Domain Specialization */}
           <motion.div
-            className="md:col-span-1 lg:col-span-2 p-6 md:p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-emerald-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
+            className="md:col-span-1 lg:col-span-2 p-4 sm:p-6 md:p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-emerald-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -138,7 +138,7 @@ function About() {
 
           {/* Bento Card 3: Cloud Hosting & Infrastructure */}
           <motion.div
-            className="md:col-span-1 lg:col-span-1 p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
+            className="md:col-span-1 lg:col-span-1 p-4 sm:p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
@@ -163,7 +163,7 @@ function About() {
 
           {/* Bento Card 4: Academic Foundation */}
           <motion.div
-            className="md:col-span-1 lg:col-span-2 p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-indigo-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
+            className="md:col-span-1 lg:col-span-2 p-4 sm:p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-indigo-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -189,7 +189,7 @@ function About() {
 
           {/* Bento Card 5: Location & Availability */}
           <motion.div
-            className="md:col-span-1 lg:col-span-1 p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-emerald-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
+            className="md:col-span-1 lg:col-span-1 p-4 sm:p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-emerald-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}

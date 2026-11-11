@@ -170,22 +170,22 @@ function Resume() {
                   {/* Glowing Node Dot on Timeline */}
                   <div className="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-neutral-950 border-2 border-cyan-400 group-hover:scale-125 group-hover:bg-cyan-400 transition-all shadow-md shadow-cyan-500/50" />
 
-                  {/* Card Content */}
-                  <div className="p-6 md:p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/40 backdrop-blur-xl transition-all duration-300">
-                    <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                  {/* Card Content - Compact on Mobile */}
+                  <div className="p-4 sm:p-6 md:p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/40 backdrop-blur-xl transition-all duration-300">
+                    <div className="flex flex-wrap items-center justify-between gap-2.5 mb-3 sm:mb-4">
                       <div>
-                        <span className="text-xs font-mono px-2.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 uppercase tracking-wider">
+                        <span className="text-[10px] sm:text-xs font-mono px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 uppercase tracking-wider">
                           {exp.type}
                         </span>
-                        <h3 className="text-xl md:text-2xl font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mt-1.5 sm:mt-2 group-hover:text-cyan-400 transition-colors">
                           {exp.title}
                         </h3>
-                        <p className="text-base font-semibold text-emerald-400 mt-0.5">
+                        <p className="text-sm sm:text-base font-semibold text-emerald-400 mt-0.5">
                           {exp.company}
                         </p>
                       </div>
 
-                      <div className="text-xs text-neutral-400 flex flex-col items-start sm:items-end gap-1 font-mono">
+                      <div className="text-[11px] sm:text-xs text-neutral-400 flex flex-col items-start sm:items-end gap-0.5 sm:gap-1 font-mono">
                         <span className="flex items-center gap-1.5">
                           <FaCalendarAlt className="text-cyan-400" />
                           {exp.period}
@@ -197,21 +197,21 @@ function Resume() {
                       </div>
                     </div>
 
-                    <ul className="space-y-2.5 mb-6 text-sm text-neutral-300 leading-relaxed">
+                    <ul className="space-y-1.5 sm:space-y-2.5 mb-4 sm:mb-6 text-xs sm:text-sm text-neutral-300 leading-relaxed">
                       {exp.achievements.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
 
                     {/* Tech Tags */}
-                    <div className="flex flex-wrap gap-2 pt-4 border-t border-neutral-800/80">
+                    <div className="flex flex-wrap gap-1.5 pt-3 sm:pt-4 border-t border-neutral-800/80">
                       {exp.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-2.5 py-0.5 text-xs font-medium rounded-md bg-neutral-800/70 text-neutral-300 border border-neutral-700/40"
+                          className="px-2 py-0.5 text-[10px] sm:text-xs font-medium rounded-md bg-neutral-800/70 text-neutral-300 border border-neutral-700/40"
                         >
                           {tag}
                         </span>
@@ -242,7 +242,7 @@ function Resume() {
                 {education.map((edu, index) => (
                   <motion.div
                     key={index}
-                    className="p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/30 backdrop-blur-xl transition-all"
+                    className="p-4 sm:p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-cyan-500/30 backdrop-blur-xl transition-all"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -281,7 +281,7 @@ function Resume() {
                 {certifications.map((cert, index) => (
                   <motion.div
                     key={index}
-                    className="p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-emerald-500/30 backdrop-blur-xl transition-all"
+                    className="p-4 sm:p-6 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-emerald-500/30 backdrop-blur-xl transition-all"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

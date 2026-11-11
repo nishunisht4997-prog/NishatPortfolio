@@ -131,6 +131,10 @@ body {
     box-shadow: 0 0 20px rgba(234, 179, 8, 0.15), 0 0 40px rgba(234, 179, 8, 0.05);
   }
 
+  .cinematic-glow {
+    box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.18), 0 0 15px -3px rgba(16, 185, 129, 0.12);
+  }
+
   /* Shimmer animation for skeletons */
   .animate-shimmer {
     animation: shimmer 2s infinite;

@@ -166,17 +166,23 @@ const ThreeBackground = memo(() => {
       targetX += (mouseX - targetX) * 0.04;
       targetY += (mouseY - targetY) * 0.04;
 
-      // Animate wave positions
+      // Cinematic floating camera drift
+      camera.position.x = Math.sin(elapsedTime * 0.25) * 1.8 + targetX * 10;
+      camera.position.y = 8 + Math.cos(elapsedTime * 0.35) * 0.7 - targetY * 6;
+      camera.lookAt(0, -1, 0);
+
+      // Animate wave positions with harmonic fluid ripple
       const positions = waveGeometry.attributes.position.array;
       let pIdx = 0;
       for (let i = 0; i < gridCols; i++) {
         for (let j = 0; j < gridRows; j++) {
           const u = i * 0.22;
           const v = j * 0.22;
-          // Smooth sine & cosine harmonic wave
+          // Multi-harmonic cinematic wave
           const waveHeight =
-            Math.sin(u + elapsedTime * 1.2) * 1.2 +
-            Math.cos(v + elapsedTime * 0.9) * 1.1;
+            Math.sin(u + elapsedTime * 1.1) * 1.2 +
+            Math.cos(v + elapsedTime * 0.85) * 1.0 +
+            Math.sin((u + v) * 0.4 + elapsedTime * 1.3) * 0.5;
 
           positions[pIdx * 3 + 1] = -5 + waveHeight;
           pIdx++;
@@ -188,7 +194,7 @@ const ThreeBackground = memo(() => {
       wavePoints.rotation.y = targetX * 0.8;
       wavePoints.rotation.x = targetY * 0.6;
 
-      dustPoints.rotation.y = elapsedTime * 0.02 + targetX * 0.5;
+      dustPoints.rotation.y = elapsedTime * 0.025 + targetX * 0.5;
       dustPoints.rotation.x = targetY * 0.4;
 
       renderer.render(scene, camera);
