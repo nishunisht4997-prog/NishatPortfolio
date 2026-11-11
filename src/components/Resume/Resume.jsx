@@ -33,12 +33,21 @@ function Resume() {
         period: "Aug 2026 – Present",
         location: "Bhubaneswar, Odisha, India",
         type: "Full-Time / Contract",
-        tags: ["PHP", "Tailwind CSS", "MySQL", "JavaScript", "Hostinger cPanel"],
+        tags: [
+          "React.js",
+          "Node.js",
+          "PHP",
+          "MySQL",
+          "MongoDB",
+          "Three.js",
+          "Tailwind CSS",
+          "JavaScript"
+        ],
         achievements: [
-          "Architected and engineered the official corporate web platform (geinca.com) using PHP, Tailwind CSS, MySQL, and responsive modern UI.",
-          "Implemented secure server-side logic, consultation booking workflows, and optimized relational MySQL queries.",
+          "Architected and engineered the official corporate web platform (geinca.com) using PHP, HTML5/CSS3, JavaScript, MySQL, and Tailwind CSS.",
+          "Developed high-performance client applications and portals utilizing React.js, Node.js, MongoDB, Three.js, and modern full-stack workflows.",
+          "Implemented secure server-side logic, consultation booking workflows, and optimized relational MySQL and MongoDB database schemas.",
           "Managed domain mapping, SSL configuration, and production web deployments via Hostinger cPanel server infrastructure.",
-          "Conducted comprehensive debugging, cross-browser compatibility testing, and client requirement integrations.",
         ],
       },
       {
