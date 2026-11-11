@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "title": "DharmaShok",
+    "description": "Commercial e-commerce & retail platform featuring dynamic product catalogs, customer inquiry workflows, secure order handling, and high-performance cloud hosting on Hostinger.",
+    "image": "/projects/dharmashok.png",
+    "tags": [
+      "PHP",
+      "JavaScript",
+      "MySQL",
+      "Hostinger",
+      "Tailwind CSS"
+    ],
+    "category": "fullstack",
+    "demoUrl": "https://dharmashok.in/",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Business Management App",
+    "description": "Full-stack ERP system with secure authentication, role-based admin dashboard, real-time analytics, and operational business modules.",
+    "image": "/projects/businessapp.png",
+    "tags": [
+      "Next.js",
+      "React.js",
+      "PostgreSQL",
+      "Render",
+      "Tailwind CSS"
+    ],
+    "category": "fullstack",
+    "demoUrl": "https://buuisenessapp.onrender.com/",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Noorify – Arabic Learning App",
+    "description": "Interactive e-learning app with native audio pronunciation, handwriting canvas, alphabet lessons, and real-time quiz scoring.",
+    "image": "/projects/noorify.png",
+    "tags": [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Netlify"
+    ],
+    "category": "frontend",
+    "demoUrl": "https://tourmaline-bienenstich-ca1e96.netlify.app/",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Fitness Gym & Wellness Portal",
+    "description": "Modern fitness platform featuring dynamic membership tiers, trainer portfolios, class scheduling, and direct inquiry booking.",
+    "image": "/projects/fitness.png",
+    "tags": [
+      "React.js",
+      "Tailwind CSS",
+      "Responsive UI",
+      "Netlify"
+    ],
+    "category": "frontend",
+    "demoUrl": "https://fitness-gym-bt-nishat.netlify.app/",
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Dr. Mayank Clinic",
+    "description": "Doctor & consultation portal offering comprehensive medical practice details, appointment booking workflows, and responsive healthcare UI.",
+    "image": "/projects/dr-mayank.png",
+    "tags": [
+      "React.js",
+      "PHP",
+      "MySQL",
+      "Render"
+    ],
+    "category": "healthcare",
+    "demoUrl": "https://dr-mayank.onrender.com/",
+    "featured": true
+  },
+  {
+    "id": 6,
+    "title": "Delhi Diagno",
+    "description": "Pathology & diagnostic center platform with test catalogs, preventive health packages, online booking inquiries, and digital report access guides.",
+    "image": "/projects/delhi-diagno.png",
+    "tags": [
+      "React.js",
+      "PHP",
+      "MySQL",
+      "Hostinger"
+    ],
+    "category": "healthcare",
+    "demoUrl": "https://delhidiagno.in/",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "title": "Dr. Kumar Abhijit Dash",
+    "description": "Specialist medical practice portal featuring clinical treatments, doctor profile, patient consultation forms, and high-performance design.",
+    "image": "/projects/dr-kumar.png",
+    "tags": [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "Render"
+    ],
+    "category": "healthcare",
+    "demoUrl": "https://dr-kumar-abhijit-dash.onrender.com/",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "Dr. Sushma Agarwal",
+    "description": "Healthcare & patient services platform dedicated to clinical consultations, healthcare facilities overview, and streamlined patient interactions.",
+    "image": "/projects/dr-sushma.png",
+    "tags": [
+      "React.js",
+      "Tailwind CSS",
+      "Netlify"
+    ],
+    "category": "healthcare",
+    "demoUrl": "https://dr-sushma-agarwal-by-nishat.netlify.app/",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "Guru Travel & Tourism Portal",
+    "description": "Travel agency platform with holiday destination packages, tour duration filters, customer reviews, and reservation forms.",
+    "image": "/projects/travel.png",
+    "tags": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Netlify"
+    ],
+    "category": "frontend",
+    "demoUrl": "https://guru-travel-by-nishat.netlify.app/",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "Gems and Vastu Hub",
+    "description": "E-Commerce & consultancy portal showcasing certified gemstones, vastu consultation packages, and client inquiry workflows.",
+    "image": "/projects/gems-vastu.png",
+    "tags": [
+      "React.js",
+      "PHP",
+      "MySQL",
+      "Hostinger"
+    ],
+    "category": "frontend",
+    "demoUrl": "https://gemsandvastuhub.com/",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "title": "Raj Residency Koraput",
+    "description": "Hotel & hospitality platform featuring room booking workflows, luxury amenities showcase, customer reviews, and local tourism guides.",
+    "image": "/projects/raj-residency.png",
+    "tags": [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "Netlify"
+    ],
+    "category": "fullstack",
+    "demoUrl": "https://rajresidencykoraput.in/",
+    "featured": false
+  }
+]
