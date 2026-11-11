@@ -63,8 +63,8 @@
   },
   {
     "id": 5,
-    "title": "Dr. Mayank Clinic",
-    "description": "Doctor & consultation portal offering comprehensive medical practice details, appointment booking workflows, and responsive healthcare UI.",
+    "title": "Dr. Mayank Shekhar Clinic",
+    "description": "Healthcare & consultation portal for leading Laparoscopic GI & Oncosurgeon, featuring service details, appointment booking workflows, and responsive medical UI.",
     "image": "/projects/dr-mayank.png",
     "tags": [
       "React.js",
