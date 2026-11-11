@@ -17,8 +17,8 @@
   },
   {
     "id": 2,
-    "title": "Business Management App",
-    "description": "Full-stack ERP system with secure authentication, role-based admin dashboard, real-time analytics, and operational business modules.",
+    "title": "ApnaBiz – Business Management App",
+    "description": "Full-stack ERP & hyperlocal discovery platform with secure authentication, role-based admin dashboard, real-time analytics, and operational business modules.",
     "image": "/projects/businessapp.png",
     "tags": [
       "Next.js",
