@@ -30,7 +30,7 @@ function Resume() {
       {
         title: "Web Developer",
         company: "Geinca Futuristic Tech",
-        period: "Aug 2026 – Oct 2026",
+        period: "Aug 2026 – Present",
         location: "Bhubaneswar, Odisha, India",
         type: "Full-Time / Contract",
         tags: ["React", "PHP", "MySQL", "Hostinger cPanel", "JavaScript"],

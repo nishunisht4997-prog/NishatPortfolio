@@ -112,16 +112,16 @@ function Home() {
         {/* Impact Subtitle */}
         <p className="gsap-hero-elem text-neutral-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
           Crafting modern, high-performance web applications with production-grade architecture. 
-          Proven track record deploying <span className="text-cyan-400 font-medium">11+ live client platforms</span> across commercial e-commerce, healthcare clinics, e-learning systems, and SaaS ERPs.
+          Specializing in responsive frontends with <span className="text-cyan-400 font-medium">React.js & Next.js</span>, and robust backend systems powered by <span className="text-emerald-400 font-medium">PHP, Node.js & MySQL</span>.
         </p>
 
         {/* CTA Action Buttons */}
         <div className="gsap-hero-elem flex flex-wrap justify-center items-center gap-4 mb-14">
           <button
             onClick={() => handleScrollTo("projects")}
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-neutral-950 bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 hover:opacity-95 shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:scale-[1.02]"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-neutral-950 bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 hover:opacity-95 shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
           >
-            <span>Explore 11+ Live Projects</span>
+            <span>Explore Featured Projects</span>
             <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
           </button>
 
@@ -149,23 +149,23 @@ function Home() {
         <div className="gsap-hero-elem grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto pt-4 border-t border-neutral-800/80">
           <div className="p-3.5 rounded-xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
             <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-              11+
-            </div>
-            <div className="text-xs text-neutral-400 font-medium mt-0.5">Live Production Deployments</div>
-          </div>
-
-          <div className="p-3.5 rounded-xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
-            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-              4+
-            </div>
-            <div className="text-xs text-neutral-400 font-medium mt-0.5">Healthcare Portals</div>
-          </div>
-
-          <div className="p-3.5 rounded-xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
-            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
               Full-Stack
             </div>
-            <div className="text-xs text-neutral-400 font-medium mt-0.5">React • Next.js • PHP • Node</div>
+            <div className="text-xs text-neutral-400 font-medium mt-0.5">Web Developer & Engineer</div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
+            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+              Frontend
+            </div>
+            <div className="text-xs text-neutral-400 font-medium mt-0.5">React.js • Next.js • Tailwind</div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">
+            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+              Backend
+            </div>
+            <div className="text-xs text-neutral-400 font-medium mt-0.5">PHP • Node.js • MySQL • APIs</div>
           </div>
 
           <div className="p-3.5 rounded-xl bg-neutral-900/40 border border-neutral-800/60 backdrop-blur-sm">

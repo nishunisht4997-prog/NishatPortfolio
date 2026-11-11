@@ -8,19 +8,18 @@ const ThreeBackground = memo(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Detect mobile for performance optimization
     const isMobile = window.innerWidth < 768;
-    const particleCount = isMobile ? 80 : 220;
 
     // Scene, Camera, Renderer
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-      60,
+      55,
       container.clientWidth / container.clientHeight,
       0.1,
       1000
     );
-    camera.position.z = 24;
+    camera.position.set(0, 8, 28);
+    camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
@@ -31,61 +30,91 @@ const ThreeBackground = memo(() => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
-    // 1. Futuristic Central Wireframe Polyhedron
-    const coreGeometry = new THREE.IcosahedronGeometry(6.5, isMobile ? 1 : 2);
-    const coreMaterial = new THREE.MeshBasicMaterial({
-      color: 0x06b6d4,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.18
-    });
-    const coreMesh = new THREE.Mesh(coreGeometry, coreMaterial);
-    scene.add(coreMesh);
+    // ==========================================
+    // 1. Sleek 3D Undulating Particle Grid (Wave Floor)
+    // ==========================================
+    const gridCols = isMobile ? 32 : 55;
+    const gridRows = isMobile ? 24 : 40;
+    const spacing = 1.4;
+    const totalWaveParticles = gridCols * gridRows;
 
-    // Inner glowing core
-    const innerGeometry = new THREE.OctahedronGeometry(3.5, 1);
-    const innerMaterial = new THREE.MeshBasicMaterial({
-      color: 0x10b981,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.35
-    });
-    const innerMesh = new THREE.Mesh(innerGeometry, innerMaterial);
-    scene.add(innerMesh);
+    const waveGeometry = new THREE.BufferGeometry();
+    const wavePositions = new Float32Array(totalWaveParticles * 3);
+    const waveColors = new Float32Array(totalWaveParticles * 3);
 
-    // 2. Surrounding 3D Floating Particles
-    const particlesGeometry = new THREE.BufferGeometry();
-    const positions = new Float32Array(particleCount * 3);
-    const scales = new Float32Array(particleCount);
+    const colorCyan = new THREE.Color(0x06b6d4);
+    const colorEmerald = new THREE.Color(0x10b981);
+    const colorIndigo = new THREE.Color(0x6366f1);
 
-    for (let i = 0; i < particleCount * 3; i += 3) {
-      // Distribute in a spherical cloud around center
-      const radius = 10 + Math.random() * 22;
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(Math.random() * 2 - 1);
+    let idx = 0;
+    for (let i = 0; i < gridCols; i++) {
+      for (let j = 0; j < gridRows; j++) {
+        const x = (i - gridCols / 2) * spacing;
+        const z = (j - gridRows / 2) * spacing;
+        const y = -4; // placed lower down so it never blocks central text
 
-      positions[i] = radius * Math.sin(phi) * Math.cos(theta);
-      positions[i + 1] = radius * Math.sin(phi) * Math.sin(theta);
-      positions[i + 2] = radius * Math.cos(phi);
+        wavePositions[idx * 3] = x;
+        wavePositions[idx * 3 + 1] = y;
+        wavePositions[idx * 3 + 2] = z;
 
-      scales[i / 3] = Math.random() * 0.8 + 0.3;
+        // Gradient coloring from center to edges
+        const distFromCenter = Math.sqrt(x * x + z * z) / 35;
+        const c = new THREE.Color().lerpColors(colorCyan, colorEmerald, Math.min(distFromCenter, 1));
+        if (j > gridRows * 0.7) {
+          c.lerp(colorIndigo, 0.4);
+        }
+
+        waveColors[idx * 3] = c.r;
+        waveColors[idx * 3 + 1] = c.g;
+        waveColors[idx * 3 + 2] = c.b;
+
+        idx++;
+      }
     }
 
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    waveGeometry.setAttribute('position', new THREE.BufferAttribute(wavePositions, 3));
+    waveGeometry.setAttribute('color', new THREE.BufferAttribute(waveColors, 3));
 
-    // Particle Material
-    const particlesMaterial = new THREE.PointsMaterial({
-      color: 0x38bdf8,
-      size: isMobile ? 0.2 : 0.28,
+    const waveMaterial = new THREE.PointsMaterial({
+      size: isMobile ? 0.18 : 0.24,
+      vertexColors: true,
       transparent: true,
-      opacity: 0.65,
+      opacity: 0.7,
       blending: THREE.AdditiveBlending
     });
 
-    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
-    scene.add(particles);
+    const wavePoints = new THREE.Points(waveGeometry, waveMaterial);
+    scene.add(wavePoints);
 
-    // Mouse movement interaction
+    // ==========================================
+    // 2. Subtle Starry Constellation Dust
+    // ==========================================
+    const dustCount = isMobile ? 40 : 90;
+    const dustGeometry = new THREE.BufferGeometry();
+    const dustPositions = new Float32Array(dustCount * 3);
+
+    for (let i = 0; i < dustCount * 3; i += 3) {
+      dustPositions[i] = (Math.random() - 0.5) * 60;
+      dustPositions[i + 1] = (Math.random() - 0.5) * 35;
+      dustPositions[i + 2] = (Math.random() - 0.5) * 30;
+    }
+
+    dustGeometry.setAttribute('position', new THREE.BufferAttribute(dustPositions, 3));
+
+    const dustMaterial = new THREE.PointsMaterial({
+      color: 0x38bdf8,
+      size: 0.16,
+      transparent: true,
+      opacity: 0.45,
+      blending: THREE.AdditiveBlending
+    });
+
+    const dustPoints = new THREE.Points(dustGeometry, dustMaterial);
+    scene.add(dustPoints);
+
+    // ==========================================
+    // Mouse Interactive Parallax
+    // ==========================================
     let mouseX = 0;
     let mouseY = 0;
     let targetX = 0;
@@ -94,8 +123,8 @@ const ThreeBackground = memo(() => {
     const handleMouseMove = (event) => {
       const windowHalfX = window.innerWidth / 2;
       const windowHalfY = window.innerHeight / 2;
-      mouseX = (event.clientX - windowHalfX) * 0.0008;
-      mouseY = (event.clientY - windowHalfY) * 0.0008;
+      mouseX = (event.clientX - windowHalfX) * 0.0006;
+      mouseY = (event.clientY - windowHalfY) * 0.0006;
     };
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
@@ -112,7 +141,7 @@ const ThreeBackground = memo(() => {
 
     window.addEventListener('resize', handleResize);
 
-    // Visibility Observer to pause when off-screen
+    // Pause when off-screen
     let isVisible = true;
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -134,30 +163,39 @@ const ThreeBackground = memo(() => {
       const elapsedTime = clock.getElapsedTime();
 
       // Smooth mouse lerp
-      targetX += (mouseX - targetX) * 0.05;
-      targetY += (mouseY - targetY) * 0.05;
+      targetX += (mouseX - targetX) * 0.04;
+      targetY += (mouseY - targetY) * 0.04;
 
-      // Rotate central meshes
-      coreMesh.rotation.x = elapsedTime * 0.08 + targetY * 1.5;
-      coreMesh.rotation.y = elapsedTime * 0.12 + targetX * 1.5;
+      // Animate wave positions
+      const positions = waveGeometry.attributes.position.array;
+      let pIdx = 0;
+      for (let i = 0; i < gridCols; i++) {
+        for (let j = 0; j < gridRows; j++) {
+          const u = i * 0.22;
+          const v = j * 0.22;
+          // Smooth sine & cosine harmonic wave
+          const waveHeight =
+            Math.sin(u + elapsedTime * 1.2) * 1.2 +
+            Math.cos(v + elapsedTime * 0.9) * 1.1;
 
-      innerMesh.rotation.x = -elapsedTime * 0.15 - targetY * 2;
-      innerMesh.rotation.y = -elapsedTime * 0.2 - targetX * 2;
+          positions[pIdx * 3 + 1] = -5 + waveHeight;
+          pIdx++;
+        }
+      }
+      waveGeometry.attributes.position.needsUpdate = true;
 
-      // Gentle floating pulse
-      coreMesh.scale.setScalar(1 + Math.sin(elapsedTime * 0.8) * 0.04);
-      innerMesh.scale.setScalar(1 + Math.cos(elapsedTime * 1.2) * 0.06);
+      // Subtle tilt of wave and dust with mouse
+      wavePoints.rotation.y = targetX * 0.8;
+      wavePoints.rotation.x = targetY * 0.6;
 
-      // Rotate particle cloud
-      particles.rotation.y = elapsedTime * 0.03 + targetX * 0.8;
-      particles.rotation.x = elapsedTime * 0.02 + targetY * 0.8;
+      dustPoints.rotation.y = elapsedTime * 0.02 + targetX * 0.5;
+      dustPoints.rotation.x = targetY * 0.4;
 
       renderer.render(scene, camera);
     };
 
     animate();
 
-    // Cleanup
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('mousemove', handleMouseMove);
@@ -168,12 +206,10 @@ const ThreeBackground = memo(() => {
         container.removeChild(renderer.domElement);
       }
 
-      coreGeometry.dispose();
-      coreMaterial.dispose();
-      innerGeometry.dispose();
-      innerMaterial.dispose();
-      particlesGeometry.dispose();
-      particlesMaterial.dispose();
+      waveGeometry.dispose();
+      waveMaterial.dispose();
+      dustGeometry.dispose();
+      dustMaterial.dispose();
       renderer.dispose();
     };
   }, []);
@@ -181,10 +217,10 @@ const ThreeBackground = memo(() => {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-80"
+      className="absolute inset-0 pointer-events-none z-0 overflow-hidden"
       style={{
-        maskImage: 'radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 100%)',
-        WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 100%)',
+        maskImage: 'radial-gradient(ellipse 85% 75% at 50% 50%, black 40%, transparent 100%)',
+        WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 50% 50%, black 40%, transparent 100%)',
       }}
     />
   );

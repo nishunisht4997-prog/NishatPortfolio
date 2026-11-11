@@ -81,7 +81,7 @@ function Projects() {
               </span>
             </h2>
             <p className="text-neutral-400 text-base md:text-lg max-w-2xl mx-auto mt-3">
-              11 live deployments across Commercial E-Commerce, Healthcare Clinics, SaaS ERPs, and Interactive Ed-Tech.
+              Commercial E-Commerce platforms, Healthcare portals, SaaS ERPs, and Interactive Ed-Tech applications.
             </p>
           </motion.div>
 

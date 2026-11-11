@@ -104,35 +104,35 @@ function About() {
           >
             <div>
               <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                <FaHeartbeat />
+                <FaRocket />
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">Healthcare & Clinic Platforms</h3>
+              <h3 className="text-lg font-bold text-white mb-2">Live Client Platforms</h3>
               <p className="text-neutral-400 text-sm leading-relaxed mb-4">
-                Specialized experience developing real-world healthcare websites and diagnostic systems with appointment booking, service catalogs, and doctor profiles.
+                Hands-on production websites engineered and deployed for commercial businesses, healthcare diagnostics, and e-commerce brands.
               </p>
 
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
-                  <div className="font-semibold text-emerald-400">Dr. Mayank Clinic</div>
-                  <div className="text-neutral-500 text-[11px]">Consultation Portal</div>
+                  <div className="font-semibold text-emerald-400">DharmaShok</div>
+                  <div className="text-neutral-500 text-[11px]">E-Commerce Portal</div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
                   <div className="font-semibold text-emerald-400">Delhi Diagno</div>
                   <div className="text-neutral-500 text-[11px]">Pathology & Diagnostic</div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
-                  <div className="font-semibold text-emerald-400">Dr. Sushma Agarwal</div>
-                  <div className="text-neutral-500 text-[11px]">Patient Services</div>
+                  <div className="font-semibold text-emerald-400">Gems and Vastu Hub</div>
+                  <div className="text-neutral-500 text-[11px]">Retail & Consultancy</div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
-                  <div className="font-semibold text-emerald-400">Dr. Kumar Abhijit</div>
-                  <div className="text-neutral-500 text-[11px]">Medical Practice</div>
+                  <div className="font-semibold text-emerald-400">Raj Residency</div>
+                  <div className="text-neutral-500 text-[11px]">Hotel & Hospitality</div>
                 </div>
               </div>
             </div>
 
             <div className="mt-4 pt-3 text-xs text-neutral-400 border-t border-neutral-800/80">
-              Trusted by practicing doctors & clinical centers.
+              Live in production on custom domains & cloud infrastructure.
             </div>
           </motion.div>
 
