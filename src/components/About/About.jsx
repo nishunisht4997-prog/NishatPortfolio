@@ -94,7 +94,7 @@ function About() {
             </div>
           </motion.div>
 
-          {/* Bento Card 2: Healthcare & Domain Specialization */}
+          {/* Bento Card 2: 5 Live Production Platforms */}
           <motion.div
             className="md:col-span-1 lg:col-span-2 p-4 sm:p-6 md:p-8 rounded-2xl bg-neutral-900/60 border border-neutral-800/80 hover:border-emerald-500/30 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group"
             initial={{ opacity: 0, y: 25 }}
@@ -106,33 +106,38 @@ function About() {
               <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-4 group-hover:scale-110 transition-transform">
                 <FaRocket />
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">Live Client Platforms</h3>
+              <h3 className="text-lg font-bold text-white mb-2">5 Live Production Platforms</h3>
               <p className="text-neutral-400 text-sm leading-relaxed mb-4">
-                Hands-on production websites engineered and deployed for commercial businesses, healthcare diagnostics, and e-commerce brands.
+                Commercial production websites engineered, customized, and deployed across IT & software, healthcare diagnostics, and e-commerce enterprises.
               </p>
 
-              <div className="grid grid-cols-2 gap-2 text-xs">
-                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800 hover:border-emerald-500/40 transition-colors">
+                  <div className="font-semibold text-emerald-400">Geinca Tech</div>
+                  <div className="text-neutral-500 text-[11px]">geinca.com</div>
+                </div>
+                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800 hover:border-emerald-500/40 transition-colors">
                   <div className="font-semibold text-emerald-400">DharmaShok</div>
-                  <div className="text-neutral-500 text-[11px]">E-Commerce Portal</div>
+                  <div className="text-neutral-500 text-[11px]">dharmashok.in</div>
                 </div>
-                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
+                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800 hover:border-emerald-500/40 transition-colors">
                   <div className="font-semibold text-emerald-400">Delhi Diagno</div>
-                  <div className="text-neutral-500 text-[11px]">Pathology & Diagnostic</div>
+                  <div className="text-neutral-500 text-[11px]">delhidiagno.in</div>
                 </div>
-                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
-                  <div className="font-semibold text-emerald-400">Gems and Vastu Hub</div>
-                  <div className="text-neutral-500 text-[11px]">Retail & Consultancy</div>
+                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800 hover:border-emerald-500/40 transition-colors">
+                  <div className="font-semibold text-emerald-400">Gems and Vastu</div>
+                  <div className="text-neutral-500 text-[11px]">gemsandvastuhub.com</div>
                 </div>
-                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800">
+                <div className="p-2.5 rounded-lg bg-neutral-800/40 border border-neutral-800 hover:border-emerald-500/40 transition-colors col-span-2 sm:col-span-1">
                   <div className="font-semibold text-emerald-400">Raj Residency</div>
-                  <div className="text-neutral-500 text-[11px]">Hotel & Hospitality</div>
+                  <div className="text-neutral-500 text-[11px]">rajresidencykoraput.in</div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-4 pt-3 text-xs text-neutral-400 border-t border-neutral-800/80">
-              Live in production on custom domains & cloud infrastructure.
+            <div className="mt-4 pt-3 text-xs text-neutral-400 border-t border-neutral-800/80 flex items-center justify-between">
+              <span>5 Commercial Deployments on Live Domains</span>
+              <span className="text-emerald-400 font-mono text-[11px]">100% Production</span>
             </div>
           </motion.div>
 
